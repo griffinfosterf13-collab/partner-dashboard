@@ -4,21 +4,13 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Arial" }}>
-      {/* Sidebar */}
-      <aside
-        style={{
-          width: 240,
-          padding: 20,
-          borderRight: "1px solid #e5e5e5",
-          background: "#fafafa",
-        }}
-      >
-        <div style={{ fontWeight: 700, marginBottom: 16 }}>
-          Partner Portal
-        </div>
+    <div className="shell">
+      <aside className="sidebar">
+        <div className="brand">Cavs Partner Portal</div>
 
-        <nav style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        <div className="badge">Season: 2025–26</div>
+
+        <nav className="nav">
           <a href="/dashboard">Dashboard</a>
           <a href="/dashboard/assets">Assets</a>
           <a href="/dashboard/invoices">Invoices</a>
@@ -29,31 +21,18 @@ export default function DashboardLayout({
           <a href="/dashboard/contacts">Contacts</a>
         </nav>
 
-        <div style={{ marginTop: 24 }}>
+        <div style={{ marginTop: 16 }}>
           <a href="/">← Back Home</a>
         </div>
       </aside>
 
-      {/* Main */}
-      <div style={{ flex: 1 }}>
-        {/* Top bar */}
-        <header
-          style={{
-            height: 60,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 20px",
-            borderBottom: "1px solid #e5e5e5",
-            background: "#fff",
-          }}
-        >
-          <div style={{ fontWeight: 600 }}>Cavaliers Corporate Partners</div>
-          <div style={{ fontSize: 14, color: "#555" }}>Season: 2025–26</div>
+      <div className="main">
+        <header className="topbar">
+          <div className="topbar-title">Cavaliers Corporate Partners</div>
+          <div className="topbar-meta">Private Portal</div>
         </header>
 
-        {/* Page content */}
-        <main style={{ padding: 20 }}>{children}</main>
+        <main className="page">{children}</main>
       </div>
     </div>
   );
