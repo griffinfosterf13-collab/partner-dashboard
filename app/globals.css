@@ -174,3 +174,5 @@ a:hover{ text-decoration: underline; }
   border: 1px solid var(--border);
   background: #fff;
 }
+.pill-red{ background:#fef3f2; border-color:#fecdca; color:#b42318; }
+.pill-gray{ background:#f2f4f7; border-color:#eaecf0; color:#344054; }
