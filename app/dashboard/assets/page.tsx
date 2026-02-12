@@ -1,8 +1,10 @@
+type AssetStatus = "Completed" | "Upcoming" | "In Progress";
+
 type Asset = {
   name: string;
   category: string;
   date: string;
-  status: "Completed" | "Upcoming" | "In Progress";
+  status: AssetStatus;
   notes: string;
 };
 
@@ -37,7 +39,7 @@ const assets: Asset[] = [
   },
 ];
 
-function Pill({ status }: { status: Asset["status"] }) {
+function Pill({ status }: { status: AssetStatus }) {
   if (status === "Completed") return <span className="pill pill-green">Completed</span>;
   if (status === "Upcoming") return <span className="pill pill-yellow">Upcoming</span>;
   return <span className="pill pill-blue">In Progress</span>;
@@ -98,5 +100,19 @@ export default function AssetsPage() {
 
       <div className="grid grid-2">
         <div className="card">
-          <div className="card-h">Deli
-::contentReference[oaicite:0]{index=0}
+          <div className="card-h">Delivery Notes</div>
+          <div className="card-b" style={{ color: "var(--muted)" }}>
+            This section can hold key details like creative deadlines, approvals, game dates, and recap links.
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-h">How this page will work</div>
+          <div className="card-b" style={{ color: "var(--muted)" }}>
+            Later we’ll connect this table to Supabase so each partner only sees their own assets.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
