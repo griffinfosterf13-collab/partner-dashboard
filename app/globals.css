@@ -137,3 +137,40 @@ a:hover{ text-decoration: underline; }
   .page{ padding: 16px; }
   .grid-2, .grid-3{ grid-template-columns: 1fr; }
 }
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+}
+
+.pill-green{ background:#ecfdf3; border-color:#b7ebc6; color:#027a48; }
+.pill-yellow{ background:#fffaeb; border-color:#fbd38d; color:#b54708; }
+.pill-blue{ background:#eff8ff; border-color:#b2ddff; color:#175cd3; }
+
+.toolbar{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+.toolbar-left{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.input{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  min-width: 240px;
+}
+.select{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
